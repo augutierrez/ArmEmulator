@@ -467,6 +467,7 @@ int main(int argc, char **argv){
 	struct cache c;
 	c.size=c_size;
 	cache_init(&c, 0);
+	printf("\n");
 	printf("Quadratic Tests: \n\n");
 	r = quadratic_c(2,2,2,2);
 	printf("Quadratic_c : %d\n", r);
@@ -477,6 +478,8 @@ int main(int argc, char **argv){
 	printf("armemu(Quadratic_a) : %d\n", r);
 	print_stats(&state);
 	print_cache(&c);
+
+	printf("\n");
 
 	cache_init(&c,1);
 	r = quadratic_c(2,3,4,5);
@@ -489,6 +492,8 @@ int main(int argc, char **argv){
 	print_stats(&state);
 	print_cache(&c);
 
+	printf("\n");
+
 	cache_init(&c,1);
 	r = quadratic_c(-3,-2,-5,-9);
 	printf("Quadratic_c : %d\n", r);
@@ -499,7 +504,9 @@ int main(int argc, char **argv){
 	printf("armemu(Quadratic_a) : %d\n", r);
 	print_stats(&state);
 	print_cache(&c);
-	
+
+	printf("\n");
+
 	cache_init(&c,1);
 	r = quadratic_c(-2,-2,-2,-2);
 	printf("Quadratic_c : %d\n", r);
@@ -510,6 +517,8 @@ int main(int argc, char **argv){
 	printf("armemu(Quadratic_a) : %d\n", r);
 	print_stats(&state);
 	print_cache(&c);
+
+	printf("\n");
 
 	cache_init(&c,1);
 	r = quadratic_c(0,0,0,0);
@@ -539,7 +548,8 @@ int main(int argc, char **argv){
 	print_stats(&state);
 	print_cache(&c);
 
-	
+	printf("\n");
+
 	int array1[] = {4,3,2,31,4,3,2,4,2,1,3};
 	n = sizeof(array1)/sizeof(int);
 	cache_init(&c,1);
@@ -553,6 +563,7 @@ int main(int argc, char **argv){
 	print_stats(&state);
 	print_cache(&c);
 
+	printf("\n");
 
 	int array2[] = {-4,-3,-2,-31,-4,-3,-2,-4,-2,-1,-3};
 	n = sizeof(array2)/sizeof(int);
@@ -567,6 +578,7 @@ int main(int argc, char **argv){
 	print_stats(&state);
 	print_cache(&c);
 
+	printf("\n");
 
 	int array3[] = {-2,-2,-4};
 	n = sizeof(array3)/sizeof(int);
@@ -580,6 +592,8 @@ int main(int argc, char **argv){
 	printf("armemu(Sum_array_a) : %d\n", r);
 	print_stats(&state);
 	print_cache(&c);
+
+	printf("\n");
 
 	int array4[1000];
 	for(int i = 0; i < 1000; i = i + 2){
@@ -619,7 +633,8 @@ int main(int argc, char **argv){
 	print_stats(&state);
 	print_cache(&c);
 
-
+	printf("\n");
+	
 	cache_init(&c,1);
 	int array6[] = {1,2,3,4,5,10,22,33};
 	n = sizeof(array6)/sizeof(int);
@@ -634,6 +649,7 @@ int main(int argc, char **argv){
 	print_stats(&state);
 	print_cache(&c);
 
+	printf("\n");
 
 	cache_init(&c,1);	
 	int array7[] = {-1,-2,-3,-4,-5,-10,-22,-33};
@@ -649,6 +665,7 @@ int main(int argc, char **argv){
 	print_stats(&state);
 	print_cache(&c);
 
+	printf("\n");
 
 	cache_init(&c,1);
 	int array8[] = {-10,-22,-33};
@@ -664,6 +681,7 @@ int main(int argc, char **argv){
 	print_stats(&state);
 	print_cache(&c);
 	
+	printf("\n");
 
 	cache_init(&c,1);
 	int array5[] = {0,0,0,0,0};
@@ -731,6 +749,7 @@ int main(int argc, char **argv){
 	print_stats(&state);
 	print_cache(&c);
 
+	printf("\n");
 
 	char s2[] = {'h','e','l', 'l', 'o'};
 	r = strlen_c(s2);
@@ -747,6 +766,7 @@ int main(int argc, char **argv){
 	print_stats(&state);
 	print_cache(&c);
 
+	printf("\n");
 
 	char s3[] = {'a','b','c'};
 	r = strlen_c(s3);
@@ -761,7 +781,8 @@ int main(int argc, char **argv){
 	printf("armemu(Strlen_a) : %d\n", r);
 	print_stats(&state);
 	print_cache(&c);
-
+	
+	printf("\n");
 
 	char s4[] = {'a','b','c', 'd', 'e', 'f', 'g', 'f', 'f', 'f', 'f'};
 	r = strlen_c(s4);
@@ -777,7 +798,7 @@ int main(int argc, char **argv){
 	print_stats(&state);
 	print_cache(&c);
 
-
+	printf("\n");
 
 	char s5[] = {'a'};
 	r = strlen_c(s5);
